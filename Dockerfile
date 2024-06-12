@@ -8,6 +8,7 @@ RUN /docker_install.sh
 
 RUN groupadd -f docker
 RUN usermod -aG docker jenkins
+RUN chmod 666 /var/run/docker.sock
 
 USER jenkins
 RUN pipx ensurepath
